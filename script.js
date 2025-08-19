@@ -75,7 +75,7 @@ HAPPY BIRTHDAY, BABY!`;
 // Final Surprise (final.html)
 const slideshow = document.getElementById("slideshow");
 if (slideshow) {
-  const photos = ["assets/pic1.jpg","assets/pic2.jpg","assets/pic3.jpg"];
+  const photos = ["assets/pic1.jpg","assets/pic2.jpg","assets/pic3.jpg","assets/pic4.jpg","assets/pic5.jpg","assets/pic6.jpg","assets/pic7.jpg"];
   let idx = 0;
   setInterval(() => {
     slideshow.innerHTML = `<img src="${photos[idx]}" alt="Memory">`;

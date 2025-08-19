@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <title>Birthday Countdown</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clue 1</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #ffe4ec;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    .container {
+      width: 90%;
+    }
+    h2 { font-size: 2em; }
+    p { font-size: 1.3em; }
+    input, button {
+      padding: 12px;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Countdown to My Princess's Birthday 🎂</h1>
-  <div id="countdown"></div>
-  <button onclick="location.href='treasure.html'">Start the Treasure Hunt 💌</button>
-  <script src="script.js"></script>
+  <div class="container">
+    <h2>Clue 1 💕</h2>
+    <p>What was the first movie we watched together?</p>
+    <input type="text" id="answer">
+    <br>
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="message"></p>
+  </div>
+  <script>
+    function checkAnswer() {
+      let ans = document.getElementById("answer").value;
+      if (ans === "sanam teri kasam") {
+        window.location.href = "clue2.html";
+      } else {
+        document.getElementById("message").innerText = "Try again 💡";
+      }
+    }
+  </script>
 </body>
 </html>

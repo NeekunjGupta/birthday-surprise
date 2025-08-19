@@ -1,0 +1,42 @@
+body {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: #fff0f5;
+  color: #333;
+}
+
+h1, h2 {
+  color: #d63384;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff80bf;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+button:hover {
+  background: #ff4da6;
+}
+
+#countdown {
+  font-size: 24px;
+  margin: 20px;
+}
+#letter {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 20px;
+  white-space: pre-line;
+}
+#slideshow img {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 15px;
+}

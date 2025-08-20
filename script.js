@@ -73,7 +73,8 @@ function startConfetti() {
       r: Math.random() * 6 + 4,
       d: Math.random() * 200 + 50,
       color: colors[Math.floor(Math.random() * colors.length)],
-      tilt: Math.floor(Math.random() * 10) - 10
+      tilt: Math.floor(Math.random() * 10) - 10,
+      speed: Math.random() * 1 + 0.3 // slower speed
     });
   }
 
@@ -91,8 +92,8 @@ function startConfetti() {
 
   function update() {
     confetti.forEach((c) => {
-      c.y += Math.cos(c.d) + 1 + c.r / 2;
-      c.x += Math.sin(c.d);
+      c.y += c.speed;
+      c.x += Math.sin(c.d) * 0.3;
 
       if (c.y > canvas.height) {
         c.x = Math.random() * canvas.width;
@@ -104,8 +105,31 @@ function startConfetti() {
   draw();
 }
 
+// -------- TYPING EFFECT FOR LETTER --------
+function typeLetter() {
+  const el = document.querySelector(".letter-text");
+  if (!el) return;
+
+  const text = el.textContent;
+  el.textContent = "";
+  el.classList.add("typing");
+
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(typing, 50); // typing speed
+    } else {
+      el.classList.remove("typing");
+    }
+  }
+  typing();
+}
+
 // -------- INITIALIZE --------
 window.onload = () => {
   startCountdown();
   startConfetti();
+  typeLetter();
 };

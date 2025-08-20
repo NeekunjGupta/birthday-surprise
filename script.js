@@ -110,7 +110,7 @@ function typeLetter() {
   const el = document.querySelector(".letter-text");
   if (!el) return;
 
-  const text = el.textContent;
+  const text = el.getAttribute("data-text");
   el.textContent = "";
   el.classList.add("typing");
 

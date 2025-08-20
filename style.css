@@ -1,4 +1,4 @@
-body {
+ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -7,34 +7,38 @@ body {
   min-height: 100vh;
   text-align: center;
   color: white;
-  overflow: hidden;
   background: black;
+  overflow-y: auto;   /* allow scroll */
 }
 
-/* Baby pink pages (clues + letter) */
 body.pink {
   background: #ffc0cb; /* baby pink */
   color: #5a0033;
 }
 
-/* Container */
-.container {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
+.letter {
   max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.letter h1 {
+  color: #d63384;
+  font-family: 'Dancing Script', cursive;
 }
 
-p {
+.letter p {
   font-size: 1.2rem;
-}
-
-input, button {
+  line-height: 1.6;
+  text-align: left;
+  color: #4b1134;
+  font-family: 'Dancing Script', cursive;
+  white-space: pre-line;
+} 
+  input, button {
   padding: 10px;
   font-size: 1rem;
   margin: 10px 0;
